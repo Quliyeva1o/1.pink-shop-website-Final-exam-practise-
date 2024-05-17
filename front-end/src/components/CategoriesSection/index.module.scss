@@ -1,0 +1,25 @@
+.categoriesContainer {
+    margin: 70px auto;
+    .textconteiner{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    div {
+        
+        h1 {
+            color: #222222;
+            line-height: 1.2em !important;
+            margin-bottom: 0;
+            margin-top: 0;
+            font-weight: 600;
+            font-size: 36px;
+           
+        }
+        img {
+            padding: 15px;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
