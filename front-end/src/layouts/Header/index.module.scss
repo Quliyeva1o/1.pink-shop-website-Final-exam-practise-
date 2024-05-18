@@ -1,5 +1,6 @@
 .header {
     background-color: #f9f9ff;
+
     .headerContainer {
         display: flex !important;
         justify-content: space-between;
@@ -17,25 +18,34 @@
 .navContainer {
     display: flex !important;
     justify-content: space-between;
-    div{
-        img{
+    div {
+        img {
             padding: 20px;
         }
-        ul{
+        ul {
             display: flex;
             list-style: none;
-            li{
+            margin-bottom: 0    ;
+            li {
                 font-size: 14px;
                 color: #000;
                 font-weight: 600;
                 padding: 20px;
             }
-            .navLinks{
+            .navLinks {
                 font-size: 14px;
                 color: #000;
                 font-weight: 600;
-               text-decoration: none;
+                text-decoration: none;
             }
         }
     }
+}
+
+.mainHeader {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    z-index: 9995;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }

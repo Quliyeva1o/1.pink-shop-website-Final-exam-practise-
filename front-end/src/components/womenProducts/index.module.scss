@@ -1,0 +1,47 @@
+.textContainer {
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    z-index: 333;
+    position: relative;
+    margin: 50px auto !important;
+    h1 {
+        font-size: 36px;
+        font-weight: 700;
+        color: #000;
+    }
+    p {
+        font-family: "Poppins", sans-serif;
+        font-size: 14px;
+        font-weight: 300;
+        color: #666666;
+        line-height: 1.625em;
+    }
+}
+.cardContent {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    z-index: 222;
+
+    .card {
+        z-index: 333;
+        background-color: transparent;
+        border-radius: 0;
+        border: none;
+        box-shadow: none;
+        h6 {
+            margin-top: 15px;
+            margin-bottom: 15px;
+            font-weight: 600;
+            color: #000;
+        }
+        h3 {
+            font-weight: 700;
+            font-size: 24px;
+            color: #000;
+        }
+    }
+}

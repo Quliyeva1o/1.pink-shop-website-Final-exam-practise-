@@ -32,6 +32,8 @@ const WomenProducts = () => {
         description: '',
         img: ''
     });
+
+
     const handledel = (id) => {
         delOne(endpoints.cards, id)
         const filteredcards = cards.filter((x) => (x._id != id))
@@ -47,8 +49,20 @@ const WomenProducts = () => {
 
     const handleClose = () => setOpen(false);
 
+    const handleBasket = (id) => {
+        let local = JSON.parse(localStorage.getItem("localBasket")) || [];
+        const idx = local.findIndex(item => item.id === id);
+        if (idx !== -1) {
+            local[idx].count += 1;
+        } else {
+            local.push({ id: id, count: 1 });
+        }
+        localStorage.setItem("localBasket", JSON.stringify(local));
+    }
+
     useEffect(() => {
         formik.setValues(formikValues);
+
     }, [formikValues]);
 
     const formik = useFormik({
@@ -77,14 +91,15 @@ const WomenProducts = () => {
                             <h1>New released Products for women</h1>
                             <p>Who are in extremely love with eco-friendly system.</p>
                         </div>
-                        <CardContent style={{ display: "flex", justifyContent: "space-between" }}>
+                        <CardContent className={styles.cardContent}>
                             {cards && cards.map((item) => (
-                                <Card key={item._id}>
+                                <Card className={styles.card} key={item._id}>
                                     <img src={item.img} alt="" />
                                     <h6>{item.name}</h6>
                                     <h3>${item.price}</h3>
                                     <Button onClick={(e) => { e.preventDefault(), handledel(item._id) }}>del</Button>
                                     <Button onClick={() => { handleOpen(item._id) }}>update</Button>
+                                    <Button onClick={() => { handleBasket(item._id) }}>basket</Button>
                                     <Modal
                                         open={open}
                                         onClose={handleClose}

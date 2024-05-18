@@ -1,0 +1,36 @@
+.footer {
+    background-color: #222222;
+    width: 100% !important;
+    max-width: 100%;
+    > div {
+        width: 80%;
+        margin: 30px auto;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 100px 0;
+        h1 {
+            color: #fff;
+            margin-bottom: 25px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        p {
+            color: #777777;
+            font-family: "Poppins", sans-serif;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 1.625em;
+        }
+        > div {
+            padding: 15px;
+        }
+    }
+}
+.images {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    img {
+        padding: 3px;
+        width: 100%;
+    }
+}

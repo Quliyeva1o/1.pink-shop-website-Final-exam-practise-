@@ -6,6 +6,7 @@ import {Link} from 'react-router-dom'
 const Header = () => {
   return (
     <>
+      <div className={styles.mainHeader}>
       <div className={styles.header}>
         <Container className={styles.headerContainer} direction="horizontal" gap={2} >
           <div > <Link className={styles.links} href="#">+12312-3-1209</Link>
@@ -30,6 +31,7 @@ const Header = () => {
            </div>
           </Container>
         </nav>
+      </div>
     </>
   )
 }

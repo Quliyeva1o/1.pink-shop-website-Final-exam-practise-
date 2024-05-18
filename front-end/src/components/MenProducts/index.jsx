@@ -6,36 +6,37 @@ const MenProducts = () => {
         <>
             <div className={styles.menProductsDiv}>
                 <div className={styles.bg}>
+                </div>
                 <Container >
                     <div className={styles.textContainer}>
                         <h1>New realeased Products for Men
                         </h1>
                         <p>Who are in extremely love with eco friendly system.</p>
                     </div>
-                    <CardContent style={{display:"flex" ,justifyContent:"space-between"}}>
+                    <CardContent className={styles.cardsContent}>
 
-                        <Card>
+                        <Card className={styles.card}>
                             <img src="https://preview.colorlib.com/theme/shop/img/l1.jpg" alt="" />
                             <h6>Long Sleeve shirt
                             </h6>
                             <h3>$150.00
                             </h3>
                         </Card>
-                        <Card>
+                        <Card className={styles.card}>
                             <img src="https://preview.colorlib.com/theme/shop/img/l1.jpg" alt="" />
                             <h6>Long Sleeve shirt
                             </h6>
                             <h3>$150.00
                             </h3>
                         </Card>
-                        <Card>
+                        <Card className={styles.card}>
                             <img src="https://preview.colorlib.com/theme/shop/img/l1.jpg" alt="" />
                             <h6>Long Sleeve shirt
                             </h6>
                             <h3>$150.00
                             </h3>
                         </Card>
-                        <Card>
+                        <Card className={styles.card}>
                             <img src="https://preview.colorlib.com/theme/shop/img/l1.jpg" alt="" />
                             <h6>Long Sleeve shirt
                             </h6>
@@ -44,7 +45,7 @@ const MenProducts = () => {
                         </Card>
                     </CardContent>
                 </Container>
-                </div>
+
             </div>
         </>
     )

@@ -5,6 +5,8 @@ import CardsContext from './context/CardsContext/CardsContext'
 import { useEffect, useState } from 'react'
 import { getAll } from './API/requests'
 import { endpoints } from './API/constants'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 function App() {
   const router = createBrowserRouter(root)
 

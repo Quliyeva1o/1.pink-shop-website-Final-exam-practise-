@@ -1,0 +1,15 @@
+.logos {
+    width: 70%;
+    margin: 70px auto;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: rgba(149, 157, 165, 0.6) 0px 8px 24px;
+    padding: 50px;
+    div {
+        filter: grayscale(1);
+        transition: .3s;
+        &:hover {
+            filter: grayscale(0);
+        }
+    }
+}
