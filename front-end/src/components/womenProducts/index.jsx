@@ -8,6 +8,7 @@ import { delOne, getOne, patchOne } from '../../API/requests';
 import { endpoints } from '../../API/constants';
 import addProductSchema from '../../validations/addProductValidations';
 import Product from '../../classes/productClass';
+import { Link } from 'react-router-dom';
 
 const WomenProducts = () => {
     const style = {
@@ -100,6 +101,7 @@ const WomenProducts = () => {
                                     <Button onClick={(e) => { e.preventDefault(), handledel(item._id) }}>del</Button>
                                     <Button onClick={() => { handleOpen(item._id) }}>update</Button>
                                     <Button onClick={() => { handleBasket(item._id) }}>basket</Button>
+                                    <Button><Link to={`/${item._id}`}>detail</Link></Button>
                                     <Modal
                                         open={open}
                                         onClose={handleClose}
